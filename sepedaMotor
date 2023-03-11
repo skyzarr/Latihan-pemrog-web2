@@ -1,0 +1,39 @@
+class Motor {
+    public String nama;
+    public int cc;
+
+    public Motor(String nama, int cc) {
+        this.nama = nama;
+        this.cc = cc;
+    }
+
+    public void matikan(String namaMotor) {
+        System.out.printf("motor %s dimatikan\n", namaMotor);
+    }
+
+    public void jalankan(String namaMotor) {
+        System.out.printf("motor %s dijalankan\n\n", namaMotor);
+    }
+}
+
+class Tugas {
+    public static void main(String[] args) {
+        Motor motor1 = new Motor("R15", 155);
+        System.out.printf("nama motor: %s\n", motor1.nama);
+        System.out.printf("cc %s : %d\n", motor1.nama, motor1.cc);
+        motor1.matikan(motor1.nama);
+        motor1.jalankan(motor1.nama);
+
+        Motor motor2 = new Motor("vario", 150);
+        System.out.printf("nama motor: %s\n", motor2.nama);
+        System.out.printf("cc %s : %d\n", motor2.nama, motor2.cc);
+        motor2.matikan(motor2.nama);
+        motor2.jalankan(motor2.nama);
+
+        Motor motor3 = new Motor("cbr", 250);
+        System.out.printf("nama motor: %s\n", motor3.nama);
+        System.out.printf("cc %s : %d\n", motor3.nama, motor3.cc);
+        motor3.matikan(motor3.nama);
+        motor3.jalankan(motor3.nama);
+    }
+}
